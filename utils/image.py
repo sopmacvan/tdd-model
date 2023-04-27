@@ -1,12 +1,13 @@
 from PIL import Image, ImageDraw
 
 
-def draw_polygon_mask(polygons, img_path):
+def draw_polygon_mask(color, polygons, image):
     """
     draw polygon mask on an image
 
+    :param color: str
     :param polygons: list of list
-    :param img_path: str
+    :param image: Image
     :return image: Image
     """
 
@@ -14,17 +15,15 @@ def draw_polygon_mask(polygons, img_path):
         """check if there are polygons"""
         return type(polygons) != list
 
-    image = Image.open(img_path)
-
     if no_polygons():
-        return image, 'no polygons found'
+        return image
 
     for p in polygons:
         xy_coordinates = list(map(tuple, p))
         abnormality_mask = image.copy()
         draw = ImageDraw.Draw(abnormality_mask)
         try:
-            draw.polygon(xy_coordinates, fill="#cc0000", outline="blue")
+            draw.polygon(xy_coordinates, fill=color, outline=color)
         except TypeError:
             continue
 
