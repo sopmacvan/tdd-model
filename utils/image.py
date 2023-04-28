@@ -23,7 +23,7 @@ def draw_polygon_mask(color, polygons, image):
         abnormality_mask = image.copy()
         draw = ImageDraw.Draw(abnormality_mask)
         try:
-            draw.polygon(xy_coordinates, fill=color, outline=color)
+            draw.polygon(xy_coordinates, fill=color, outline='#00FFFF')
         except TypeError:
             continue
 
