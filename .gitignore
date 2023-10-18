@@ -1,4 +1,8 @@
-Tufts Dental Database/
+dataset/Tufts Dental Database/
+Mask-RCNN-TF2/
+logs/
 utils/__pycache__/
 __pycache__/
-/test.ipynb
+
+#/labelbox2dataframe.ipynb
+models/mask_rcnn_coco.h5
