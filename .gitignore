@@ -1,8 +1,10 @@
-dataset/Tufts Dental Database/
-Mask-RCNN-TF2/
-logs/
 utils/__pycache__/
 __pycache__/
+.ipynb_checkpoints/
+dataset/.ipynb_checkpoints/
 
-#/labelbox2dataframe.ipynb
-models/mask_rcnn_coco.h5
+dataset/Tufts Dental Database/
+models/
+others/
+output/
+detectron2/
